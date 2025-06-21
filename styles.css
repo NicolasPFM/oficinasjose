@@ -553,11 +553,25 @@ footer {
     .about-content {
         grid-template-columns: 1fr;
         gap: 30px;
+        text-align: center;
+    }
+
+    .about-text {
+        order: 1;
     }
 
     .about-stats {
         flex-direction: row;
         justify-content: space-around;
+        flex-wrap: wrap;
+        order: 2;
+        gap: 15px;
+    }
+
+    .stat {
+        flex: 1;
+        min-width: 120px;
+        max-width: 150px;
     }
 
     .products-grid {
@@ -625,6 +639,97 @@ footer {
 
     .container {
         padding: 0 10px;
+    }
+
+    /* Correções específicas para a seção about */
+    .about {
+        padding: 60px 10px;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .stat {
+        padding: 15px;
+        margin: 0;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .stat h3 {
+        font-size: 1.5rem;
+    }
+
+    .stat p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        padding: 0 5px;
+    }
+
+    .hero {
+        padding: 20px 5px;
+    }
+
+    .about {
+        padding: 40px 5px;
+    }
+
+    .about-content {
+        gap: 15px;
+    }
+
+    .about-text p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .about-stats {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .stat {
+        padding: 10px;
+        margin: 0;
+        width: 100%;
+    }
+
+    .stat h3 {
+        font-size: 1.3rem;
+    }
+
+    .stat p {
+        font-size: 0.8rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
     }
 }
 
