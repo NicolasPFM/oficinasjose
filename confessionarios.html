@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confessionários - Oficina São José</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Karatone:wght@400;700&family=Radiant+Charisma:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="images/logo.png" alt="Oficina São José">
+                    <span>Oficina São José</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="confessionarios.html" class="nav-link active">Confessionários</a></li>
+                    <li><a href="crucifixos.html" class="nav-link">Crucifixos</a></li>
+                    <li><a href="index.html#contato" class="nav-link">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1 class="page-title">Confessionários Mater Ecclesiae</h1>
+                <p class="page-subtitle">Confessionários artesanais feitos sob encomenda com materiais nobres e acabamento impecável</p>
+            </div>
+        </section>
+
+        <section class="product-details">
+            <div class="container">
+                <div class="product-showcase">
+                    <div class="product-gallery">
+                        <div class="main-image">
+                            <img id="mainImage" src="images/confessionario_1.jpg" alt="Confessionário Mater Ecclesiae">
+                        </div>
+                        <div class="thumbnail-grid">
+                            <img src="images/confessionario_1.jpg" alt="Vista frontal" class="thumbnail active" onclick="changeImage(this)">
+                            <img src="images/confessionario_2.jpg" alt="Vista lateral" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/confessionario_3.jpg" alt="Interior" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/confessionario_4.jpg" alt="Detalhes" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/confessionario_5.jpg" alt="Pessoa usando" class="thumbnail" onclick="changeImage(this)">
+                            <img src="images/confessionario_6.png" alt="Renderização" class="thumbnail" onclick="changeImage(this)">
+                        </div>
+                    </div>
+                    
+                    <div class="product-info">
+                        <h2>Modelo Mater Ecclesiae</h2>
+                        <div class="price">
+                            <span class="price-value">R$ 4.300,00</span>
+                            <span class="price-note">+ frete a consultar</span>
+                        </div>
+                        
+                        <div class="product-description">
+                            <h3>Características</h3>
+                            <ul>
+                                <li>Feito sob encomenda</li>
+                                <li>Estrutura em eucalipto rosa</li>
+                                <li>Revestimento em cedrinho</li>
+                                <li>Porta com trava magnética</li>
+                                <li>Acabamento em stein ou laca</li>
+                                <li>Escurecimento com betume (se necessário)</li>
+                                <li>Não acompanha assento interno</li>
+                                <li>Não possui assoalho ou teto</li>
+                            </ul>
+                        </div>
+
+                        <div class="customization">
+                            <h3>Personalização Disponível</h3>
+                            <div class="custom-options">
+                                <div class="custom-option">
+                                    <strong>Ícone da porta:</strong>
+                                    <span>Personalizável conforme preferência</span>
+                                </div>
+                                <div class="custom-option">
+                                    <strong>Lado do genuflexório:</strong>
+                                    <span>Direito ou esquerdo</span>
+                                </div>
+                                <div class="custom-option">
+                                    <strong>Tonalidade da madeira:</strong>
+                                    <span>Diversas opções disponíveis</span>
+                                </div>
+                                <div class="custom-option">
+                                    <strong>Cor da cortina:</strong>
+                                    <span>Vermelho ou outras cores</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-buttons">
+                            <a href="https://wa.me/5511964048797?text=Olá! Gostaria de solicitar um orçamento para o confessionário Mater Ecclesiae." target="_blank" class="btn btn-whatsapp">
+                                <span>💬</span> Solicitar Orçamento
+                            </a>
+                            <a href="mailto:ofcsjose@gmail.com?subject=Interesse no Confessionário Mater Ecclesiae" class="btn btn-email">
+                                <span>📧</span> Enviar E-mail
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                <h2 class="section-title">Vídeo de Apresentação</h2>
+                <div class="video-container">
+                    <video controls poster="images/confessionario_1.jpg">
+                        <source src="videos/confessionario_video.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <section class="specifications">
+            <div class="container">
+                <h2 class="section-title">Especificações Técnicas</h2>
+                <div class="specs-grid">
+                    <div class="spec-card">
+                        <h3>Materiais</h3>
+                        <ul>
+                            <li>Estrutura: Eucalipto rosa</li>
+                            <li>Revestimento: Cedrinho</li>
+                            <li>Cortina: Tecido de alta qualidade</li>
+                            <li>Ferragens: Trava magnética</li>
+                        </ul>
+                    </div>
+                    <div class="spec-card">
+                        <h3>Acabamentos</h3>
+                        <ul>
+                            <li>Stein natural</li>
+                            <li>Laca transparente</li>
+                            <li>Betume para escurecimento</li>
+                            <li>Verniz protetor</li>
+                        </ul>
+                    </div>
+                    <div class="spec-card">
+                        <h3>Personalização</h3>
+                        <ul>
+                            <li>Ícone da porta customizável</li>
+                            <li>Posição do genuflexório</li>
+                            <li>Tonalidade da madeira</li>
+                            <li>Cor da cortina</li>
+                        </ul>
+                    </div>
+                    <div class="spec-card">
+                        <h3>Observações</h3>
+                        <ul>
+                            <li>Não inclui assento interno</li>
+                            <li>Sem assoalho ou teto</li>
+                            <li>Fabricação sob medida disponível</li>
+                            <li>Frete calculado por região</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content">
+                    <h2>Interessado em nossos confessionários?</h2>
+                    <p>Entre em contato conosco para solicitar um orçamento personalizado ou esclarecer dúvidas sobre nossos produtos.</p>
+                    <div class="cta-buttons">
+                        <a href="https://wa.me/5511964048797" target="_blank" class="btn btn-primary">Falar no WhatsApp</a>
+                        <a href="crucifixos.html" class="btn btn-secondary">Ver Crucifixos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/logo.png" alt="Oficina São José">
+                    <span>Oficina São José</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="confessionarios.html">Confessionários</a>
+                    <a href="crucifixos.html">Crucifixos</a>
+                    <a href="index.html#contato">Contato</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/5511964048797" target="_blank">WhatsApp</a>
+                    <a href="mailto:ofcsjose@gmail.com">E-mail</a>
+                    <a href="https://instagram.com/oficinasjose" target="_blank">Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Oficina São José - Arte Sacra. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('mainImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
+            
+            // Remove active class from all thumbnails
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            
+            // Add active class to clicked thumbnail
+            thumbnail.classList.add('active');
+            
+            // Change main image
+            mainImage.src = thumbnail.src;
+            mainImage.alt = thumbnail.alt;
+        }
+    </script>
+</body>
+</html>
+
