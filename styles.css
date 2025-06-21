@@ -355,8 +355,9 @@ h1, h2, h3, h4, h5, h6 {
 .product-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition);
+    background-color: var(--background-light);
 }
 
 .product-card:hover .product-image img {
@@ -778,7 +779,8 @@ footer {
 
 .main-image img {
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 500px;
     object-fit: contain;
     transition: var(--transition);
     background-color: var(--background-light);
@@ -1062,8 +1064,9 @@ footer {
 .version-main-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: var(--transition);
+    background-color: var(--background-light);
 }
 
 .version-card:hover .version-main-image img {
@@ -1139,7 +1142,8 @@ footer {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    background-color: var(--background-light);
 }
 
 .gallery-overlay {
