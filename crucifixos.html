@@ -100,60 +100,20 @@
         <section class="product-gallery-section">
             <div class="container">
                 <h2 class="section-title">Galeria de Imagens</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_1.jpg" alt="Detalhe do rosto">
-                        <div class="gallery-overlay">
-                            <span>Detalhe do Rosto</span>
-                        </div>
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="mainGalleryImage" src="images/crucifixo_1.jpg" alt="Detalhe do rosto">
                     </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_2.jpg" alt="Vista completa">
-                        <div class="gallery-overlay">
-                            <span>Vista Completa</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_3.jpg" alt="Detalhe das mãos">
-                        <div class="gallery-overlay">
-                            <span>Detalhe das Mãos</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_4.jpg" alt="Placa INRI">
-                        <div class="gallery-overlay">
-                            <span>Placa INRI</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_5.jpg" alt="Expressão facial">
-                        <div class="gallery-overlay">
-                            <span>Expressão Facial</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_6.jpg" alt="Corpo completo">
-                        <div class="gallery-overlay">
-                            <span>Corpo Completo</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_7.jpg" alt="Detalhe superior">
-                        <div class="gallery-overlay">
-                            <span>Detalhe Superior</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_8.jpg" alt="Mão com prego">
-                        <div class="gallery-overlay">
-                            <span>Mão com Prego</span>
-                        </div>
-                    </div>
-                    <div class="gallery-item" onclick="openModal(this)">
-                        <img src="images/crucifixo_9.jpg" alt="Perfil lateral">
-                        <div class="gallery-overlay">
-                            <span>Perfil Lateral</span>
-                        </div>
+                    <div class="thumbnail-grid">
+                        <img src="images/crucifixo_1.jpg" alt="Detalhe do rosto" class="thumbnail active" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_2.jpg" alt="Vista completa" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_3.jpg" alt="Detalhe das mãos" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_4.jpg" alt="Placa INRI" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_5.jpg" alt="Expressão facial" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_6.jpg" alt="Corpo completo" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_7.jpg" alt="Detalhe superior" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_8.jpg" alt="Mão com prego" class="thumbnail" onclick="changeGalleryImage(this)">
+                        <img src="images/crucifixo_9.jpg" alt="Perfil lateral" class="thumbnail" onclick="changeGalleryImage(this)">
                     </div>
                 </div>
             </div>
@@ -233,15 +193,6 @@
         </section>
     </main>
 
-    <!-- Modal para galeria -->
-    <div id="imageModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <img id="modalImage" src="" alt="">
-            <div id="modalCaption"></div>
-        </div>
-    </div>
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -269,26 +220,19 @@
 
     <script src="script.js"></script>
     <script>
-        function openModal(element) {
-            const modal = document.getElementById('imageModal');
-            const modalImg = document.getElementById('modalImage');
-            const caption = document.getElementById('modalCaption');
+        function changeGalleryImage(thumbnail) {
+            const mainImage = document.getElementById('mainGalleryImage');
+            const thumbnails = document.querySelectorAll('.thumbnail');
             
-            modal.style.display = 'block';
-            modalImg.src = element.querySelector('img').src;
-            caption.innerHTML = element.querySelector('.gallery-overlay span').innerHTML;
-        }
-
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-
-        // Fechar modal ao clicar fora da imagem
-        window.onclick = function(event) {
-            const modal = document.getElementById('imageModal');
-            if (event.target == modal) {
-                modal.style.display = 'none';
-            }
+            // Remove active class from all thumbnails
+            thumbnails.forEach(thumb => thumb.classList.remove('active'));
+            
+            // Add active class to clicked thumbnail
+            thumbnail.classList.add('active');
+            
+            // Change main image
+            mainImage.src = thumbnail.src;
+            mainImage.alt = thumbnail.alt;
         }
     </script>
 </body>
